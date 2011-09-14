@@ -19,17 +19,21 @@
 
   <div id="container">
     <header>
-
+		<h1>Servlet 3 Async Example</h1>
+		<p>
+			Simple example for testing the new Servlet 3 annotations and asynchronous support.<br />
+			<a href="https://github.com/fabianofranz/servlet3-async-example/" target="_blank">Fork on Github</a>.
+		</p>
     </header>
     <div id="main" role="main">
-
-		<div id="content" style="width:500px;height:300px;"></div>
-
+		<div id="content">
+			Starting the listener, wait...
+		</div>
     </div>
     <footer>
-
     </footer>
   </div> <!--! end of #container -->
+  <div id="badge">look ma, no web.xml!</div>
 
 
   <!-- JavaScript at the bottom for fast page loading -->
@@ -43,8 +47,6 @@
 	
 		$(document).ready(function() {
 	
-			$.stream.setup({enableXDR: true});
-	           
 	           $.stream("./async", {
 	                   type: "http",
 	                   dataType: "text",
